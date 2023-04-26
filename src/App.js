@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -8,12 +7,26 @@ import {
   faHammer,
   faHamburger,
   faCableCar,
+  faAddressBook,
+  faWalking,
+  faEarth,
+  faRadio,
 } from "@fortawesome/free-solid-svg-icons";
 
 import { useEffect, useState } from "react";
 
 function App() {
-  const Icons = [faCoffee, faUmbrella, faHammer, faHamburger, faCableCar];
+  const Icons = [
+    faCoffee,
+    faUmbrella,
+    faHammer,
+    faHamburger,
+    faCableCar,
+    faAddressBook,
+    faWalking,
+    faEarth,
+    faRadio,
+  ];
   const [randomNumber, setRandomNumber] = useState();
   const [randomIcon, setRandomIcon] = useState();
 
@@ -28,10 +41,11 @@ function App() {
   }, [randomNumber]);
   return (
     <div className="App">
-      <FontAwesomeIcon icon={randomIcon} />
-      <br />
-      <br />
-      <button onClick={() => getRandomArbitrary(0, 5)}>Get Random Icon</button>
+      <div className="IconContainer">
+        <FontAwesomeIcon icon={randomIcon} size="3x" color="#1CA9C9" />
+      </div>
+
+      <button onClick={() => getRandomArbitrary(0, 9)}>Get Random Icon</button>
     </div>
   );
 }
