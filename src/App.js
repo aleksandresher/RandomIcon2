@@ -30,7 +30,7 @@ function App() {
   const [randomNumber, setRandomNumber] = useState();
   const [randomIcon, setRandomIcon] = useState();
 
-  function getRandomArbitrary(min, max) {
+  function getRandomNumber(min, max) {
     setRandomNumber(Math.trunc(Math.random() * (max - min) + min));
   }
 
@@ -45,7 +45,7 @@ function App() {
         <FontAwesomeIcon icon={randomIcon} size="3x" color="#1CA9C9" />
       </div>
 
-      <button onClick={() => getRandomArbitrary(0, 9)}>Get Random Icon</button>
+      <button onClick={() => getRandomNumber(0, 9)}>Get Random Icon</button>
     </div>
   );
 }
